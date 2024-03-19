@@ -1,0 +1,13 @@
+<%
+Response.Write "<html>"
+Response.Write "<head>"
+Response.Write "<title>一个简单的ASP程序</title>"
+Response.Write "</head>"
+Response.Write "<body>"
+Response.Write "<h1 align='center'>欢迎您光临我的主页</h1>"
+Dim a
+a="您来访的时间是：" & Time()
+Response.Write a 
+Response.Write "</body>"
+Response.Write "</html>"
+%>

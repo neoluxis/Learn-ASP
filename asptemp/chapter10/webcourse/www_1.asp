@@ -1,0 +1,18 @@
+<html>
+<body>
+	<h2 align='center'>第一讲 利用工具软件制作网页</h2>
+	<table width="80%" border="1" align="center">
+		<tr><td>本节主要讲授FrontPage2003的基本操作......<br><br><br><br><br></td></tr>
+	</table>
+	<p align="center">
+	<%
+	Dim link										'声明一个NextLink对象实例
+	Set link=Server.CreateObject("MSWC.NextLink")
+	'下面是上一篇的超链接
+	Response.Write "【<a href='" & link.GetPreviousURL("link.txt") & "'>" & link.GetPreviousDescription("link.txt") & "</a>】"
+	'下面是返回目录的超链接
+	Response.Write "【<a href='10-15.asp'>目录</a>】"
+	'下面是下一篇的超链接
+	Response.Write "【<a href='" & link.GetNextURL("link.txt") & "'>" & link.GetNextDescription("link.txt") & "</a>】"
+	%>
+</body>

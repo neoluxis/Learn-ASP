@@ -1,0 +1,15 @@
+<!--#Include File="function.asp"-->
+<Script language="VBScript" runat="server">
+	'当会话开始时触发本事件
+	Sub Session_OnStart
+		Session.TimeOut=3					'设置Session有效期为3分钟
+	End Sub
+	'当会话结束时触发本事件
+	Sub Session_OnEnd
+		'调用函数，将该用户离去的信息添加到聊天信息中
+		Call AddUserGo(Session("strUserName"),Session("IP"))
+		'调用函数，从当前聊天室在线人员名单中删除当前用户
+		Call DelUserName(Session("strUserName"))
+	End Sub
+</Script>
+

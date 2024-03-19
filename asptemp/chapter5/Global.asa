@@ -1,0 +1,19 @@
+<Script language="VBScript" runat="server">
+	Sub Application_OnStart
+		Application.Lock
+		Application("intAll")=0										'给访问总人数赋初值
+		Application("intOnline")=0									'给在线人数赋初值
+		Application.Unlock
+	End Sub
+	Sub Session_OnStart
+		Application.Lock
+		Application("intAll")= Application("intAll")+1				'令访问总人数加1
+		Application("intOnline")= Application("intOnline")+1		'令在线人数加1
+		Application.Unlock
+	End Sub
+	Sub Session_OnEnd
+		Application.Lock
+		Application("intOnline")= Application("intOnline")-1		'令在线人数减1
+		Application.Unlock
+	End Sub
+</Script>

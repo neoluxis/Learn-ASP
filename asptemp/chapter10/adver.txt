@@ -1,0 +1,17 @@
+REDIRECT  10-11.asp
+WIDTH 440
+HEIGHT 60
+BORDER 1
+*
+images/edu.gif
+http://www.edu.cn/
+中国教育科研网
+40
+images/sohu.gif
+http://www.sohu.com/
+搜狐
+30
+images/jjshang.gif
+https://www.pku.edu.cn/
+北京大学
+20

@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>用户注册表单示例</title>
+</head>
+<body leftmargin="100">
+	<h1 align="center">用户注册</h1>
+	<p><font color="red">以下内容请如实填写，其中带有*号的栏目是必须填写的</font>
+	<form name="frmUserReg" method="POST" action="mailto:jjshang@263.net" >
+		<p>请选择用户名:
+		<input type="text" name="txtUserId" size="15">*
+		<p>请输入你的密码:
+		<input type="password" name="txtPwd" size="8" maxlength="8">*(密码不能超过8位)
+		<p>请再次输入密码:
+		<input type="password" name="txtPwd2" size="8" maxlength="8">*
+		<p>请输入你的姓名:
+		<input type="text" name="txtUserName" size="15">*
+		<p>请选择你的性别:
+		<input type="Radio" name="rdoSex" value="male" checked >男
+		<input type="Radio" name="rdoSex" value="femail">女*
+		<p>请输入你的生日:
+		<input type="text" name="txtYear" size="4">年
+		<input type="text" name="txtMonth" size="2">月
+		<input type="text" name="txtDay" size="2">日* 
+		<p>请选择你的最高学历:
+		<select size="1" name="sltEducation">
+			<option value="高中" >高中</option>
+			<option value="本科" selected>大学本科</option>
+			<option value="硕士">硕士</option>
+			<option value="博士">博士</option>
+		</select>
+		<p>请选择你的爱好:
+		<input type="checkbox" name="chkLove" value="book">读书
+		<input type="checkbox" name="chkLove" value="movie">看电影
+		<input type="checkbox" name="chkLove" value="travel">旅游
+		<input type="checkbox" name="chkLove" value="other">其他
+		<p>你有什么意见吗?
+		<textarea name="txtMemo" rows="4" cols="40"></textarea>
+		<p align="center"><input type="submit" name="btnSubmit" value="提交" >
+		<input type="reset" name="btnReset" value="取消" >
+	</form>
+</body>
+</html>
